@@ -27,10 +27,10 @@ class ViewController: UIViewController {
     
     @IBAction func springButtonPressed() {
         setValues()
-        setAnimation()
+        setAnimationChain()
     }
     
-    private func setAnimation() {
+    private func setAnimationChain() {
         springMainView.animation = randomAnimationValues.title
         springMainView.curve = randomAnimationValues.curve
         springMainView.force = randomAnimationValues.force
