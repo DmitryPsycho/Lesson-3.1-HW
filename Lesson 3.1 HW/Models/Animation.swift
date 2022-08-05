@@ -10,12 +10,12 @@ import SpringAnimation
 
 struct Animation {
     
-    var title: String
-    var curve: String
+    let title: String
+    let curve: String
     
-    var force: Double
-    var duration: Double
-    var delay: Double
+    let force: Double
+    let duration: Double
+    let delay: Double
     
     static func getRandomValues() -> Animation {
         Animation(
