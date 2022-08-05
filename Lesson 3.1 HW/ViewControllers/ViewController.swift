@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         setValues()
     }
     
-    @IBAction func springButtonPressed(_ sender: UIButton) {
+    @IBAction func springButtonPressed() {
         setValues()
         setAnimation()
     }
