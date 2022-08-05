@@ -41,7 +41,8 @@ class ViewController: UIViewController {
         randomAnimationValues = Animation.getRandomValues()
         springButton.setTitle(
             "Run \(randomAnimationValues.title)",
-            for: .normal)
+            for: .normal
+        )
     }
     
     private func setValues() {
@@ -51,6 +52,5 @@ class ViewController: UIViewController {
         springDurationLable.text = String(format: "Duration = %.1f\n", randomAnimationValues.duration)
         springDelayLable.text = String(format: "Delay = %.1f\n", randomAnimationValues.delay)
     }
-    
 }
 
