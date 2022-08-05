@@ -62,7 +62,7 @@
 			children = (
 				40EB6ACA289CFB95005CDF08 /* ViewControllers */,
 				40EB6ACE289CFEAC005CDF08 /* Storyboards */,
-				40EB6AD1289D016A005CDF08 /* Models */,
+				40EB6AD1289D016A005CDF08 /* Services */,
 				40EB6AD0289CFECD005CDF08 /* App */,
 				40EB6ACF289CFEBF005CDF08 /* Resources  */,
 			);
@@ -104,12 +104,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		40EB6AD1289D016A005CDF08 /* Models */ = {
+		40EB6AD1289D016A005CDF08 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				40EB6AD2289D0187005CDF08 /* Animation.swift */,
 			);
-			path = Models;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
