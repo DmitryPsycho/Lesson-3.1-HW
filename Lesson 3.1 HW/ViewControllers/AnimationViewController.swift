@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AnimationViewController.swift
 //  Lesson 3.1 HW
 //
 //  Created by Psycho on 04.08.2022.
@@ -8,7 +8,7 @@
 import UIKit
 import SpringAnimation
 
-class ViewController: UIViewController {
+class AnimationViewController: UIViewController {
     
     @IBOutlet var springPresetLable: UILabel!
     @IBOutlet var springCurveLable: UILabel!
