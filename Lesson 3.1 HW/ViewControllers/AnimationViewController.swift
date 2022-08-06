@@ -10,11 +10,7 @@ import SpringAnimation
 
 class AnimationViewController: UIViewController {
     
-    @IBOutlet var springPresetLable: UILabel!
-    @IBOutlet var springCurveLable: UILabel!
-    @IBOutlet var springForceLable: UILabel!
-    @IBOutlet var springDurationLable: UILabel!
-    @IBOutlet var springDelayLable: UILabel!
+    @IBOutlet var springPresetLabel: UILabel!
     
     @IBOutlet var springMainView: SpringView!
     @IBOutlet var springButton: UIButton!
@@ -22,15 +18,16 @@ class AnimationViewController: UIViewController {
     private var randomAnimationValues = Animation.getRandomValues()
     
     override func viewDidLoad() {
-        setValues()
+        super.viewDidLoad()
+        springPresetLabel.text = randomAnimationValues.description
     }
     
     @IBAction func springButtonPressed() {
-        setValues()
         setAnimationChain()
     }
     
     private func setAnimationChain() {
+        springPresetLabel.text = randomAnimationValues.description
         springMainView.animation = randomAnimationValues.title
         springMainView.curve = randomAnimationValues.curve
         springMainView.force = randomAnimationValues.force
@@ -43,14 +40,6 @@ class AnimationViewController: UIViewController {
             "Run \(randomAnimationValues.title)",
             for: .normal
         )
-    }
-    
-    private func setValues() {
-        springPresetLable.text = "Preset: \(randomAnimationValues.title)"
-        springCurveLable.text = "Curve: \(randomAnimationValues.curve)"
-        springForceLable.text = String(format: "Force = %.1f\n", randomAnimationValues.force)
-        springDurationLable.text = String(format: "Duration = %.1f\n", randomAnimationValues.duration)
-        springDelayLable.text = String(format: "Delay = %.1f\n", randomAnimationValues.delay)
     }
 }
 

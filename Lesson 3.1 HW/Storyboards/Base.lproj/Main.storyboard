@@ -28,7 +28,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="springButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="zmX-yF-ikX"/>
+                                    <action selector="springButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="QmA-Tl-0eO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-lj-deZ" customClass="SpringView" customModule="SpringAnimation">
@@ -37,33 +37,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ftC-bJ-RN9">
                                         <rect key="frame" x="5" y="5" width="244" height="118"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Preset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj0-t2-T5P">
-                                                <rect key="frame" x="0.0" y="0.0" width="244" height="23.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curve:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hj-28-2s2">
-                                                <rect key="frame" x="0.0" y="23.5" width="244" height="23.5"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOH-s3-eOu">
-                                                <rect key="frame" x="0.0" y="47" width="244" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv8-wh-IFq">
-                                                <rect key="frame" x="0.0" y="71" width="244" height="23.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEz-fb-Btk">
-                                                <rect key="frame" x="0.0" y="94.5" width="244" height="23.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Preset:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj0-t2-T5P">
+                                                <rect key="frame" x="0.0" y="0.0" width="244" height="118"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -109,13 +84,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="springButton" destination="38D-bz-j9L" id="a3P-a7-G54"/>
-                        <outlet property="springCurveLable" destination="4Hj-28-2s2" id="qGK-Ha-5hX"/>
-                        <outlet property="springDelayLable" destination="PEz-fb-Btk" id="Y4D-Oa-7vV"/>
-                        <outlet property="springDurationLable" destination="tv8-wh-IFq" id="erf-77-oKZ"/>
-                        <outlet property="springForceLable" destination="ZOH-s3-eOu" id="xH8-xY-VKL"/>
+                        <outlet property="springButton" destination="38D-bz-j9L" id="r20-rK-2Jw"/>
                         <outlet property="springMainView" destination="p8l-lj-deZ" id="GEc-re-PUI"/>
-                        <outlet property="springPresetLable" destination="Tj0-t2-T5P" id="w9C-ll-cMx"/>
+                        <outlet property="springPresetLabel" destination="Tj0-t2-T5P" id="w9C-ll-cMx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

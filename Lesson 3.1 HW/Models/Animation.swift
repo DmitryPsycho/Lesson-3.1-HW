@@ -6,13 +6,6 @@
 //
 
 import Foundation
-import SpringAnimation
-
-/* Хотел уточнить, импортировать фреймворк сразу в модель(что по идее не правильно)
- или же создавать дополнтиельный сервисный слой, в который передвать, в нашем случае
- названия анимаций, и уже из него подтягивать нужные значения?
- 
- */
 
 struct Animation {
     
@@ -23,14 +16,23 @@ struct Animation {
     let duration: Double
     let delay: Double
     
-    static func getRandomValues() -> Animation {
-        Animation(
-            title: AnimationPreset.allCases.randomElement()?.rawValue ?? "",
-            curve: AnimationCurve.allCases.randomElement()?.rawValue ?? "",
-            force: Double.random(in: 0.1...1),
-            duration: Double.random(in: 0.1...1),
-            delay: Double.random(in: 0.1...1)
-        )
+    var description: String {
+        return """
+        Preset: \(title)
+        Curve: \(curve)
+        \(String(format: "Force = %.1f", force))
+        \(String(format: "Duration = %.1f", duration))
+        \(String(format: "Delay = %.1f", delay))
+        """
     }
     
+    static func getRandomValues() -> Animation {
+        Animation(
+            title: SpringAnimationsSource.shared.animationPresets.randomElement()?.rawValue ?? "",
+            curve: SpringAnimationsSource.shared.animationCurves.randomElement()?.rawValue ?? "",
+            force: Double.random(in: 1...2),
+            duration: Double.random(in: 1...2),
+            delay: Double.random(in: 0...1)
+        )
+    }
 }
