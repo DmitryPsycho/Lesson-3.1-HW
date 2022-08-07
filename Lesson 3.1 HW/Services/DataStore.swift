@@ -12,8 +12,8 @@ class SpringAnimationsSource {
     
     static let shared = SpringAnimationsSource()
     
-    let animationPresets = AnimationPreset.allCases
-    let animationCurves = AnimationCurve.allCases
+    let presets = AnimationPreset.allCases
+    let curves = AnimationCurve.allCases
     
     private init() {}
     

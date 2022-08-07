@@ -10,17 +10,16 @@ import SpringAnimation
 
 class AnimationViewController: UIViewController {
     
-    @IBOutlet var springPresetLabel: UILabel!
+    @IBOutlet var springPresetLabel: UILabel! {
+        didSet {
+            springPresetLabel.text = randomAnimationValues.description
+        }
+    }
     
     @IBOutlet var springMainView: SpringView!
     @IBOutlet var springButton: UIButton!
     
     private var randomAnimationValues = Animation.getRandomValues()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        springPresetLabel.text = randomAnimationValues.description
-    }
     
     @IBAction func springButtonPressed() {
         setAnimationChain()
@@ -28,6 +27,7 @@ class AnimationViewController: UIViewController {
     
     private func setAnimationChain() {
         springPresetLabel.text = randomAnimationValues.description
+        
         springMainView.animation = randomAnimationValues.title
         springMainView.curve = randomAnimationValues.curve
         springMainView.force = randomAnimationValues.force

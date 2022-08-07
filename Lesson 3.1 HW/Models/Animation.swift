@@ -28,8 +28,8 @@ struct Animation {
     
     static func getRandomValues() -> Animation {
         Animation(
-            title: SpringAnimationsSource.shared.animationPresets.randomElement()?.rawValue ?? "",
-            curve: SpringAnimationsSource.shared.animationCurves.randomElement()?.rawValue ?? "",
+            title: SpringAnimationsSource.shared.presets.randomElement()?.rawValue ?? "",
+            curve: SpringAnimationsSource.shared.curves.randomElement()?.rawValue ?? "",
             force: Double.random(in: 1...2),
             duration: Double.random(in: 1...2),
             delay: Double.random(in: 0...1)
